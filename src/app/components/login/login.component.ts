@@ -26,6 +26,9 @@ export class LoginComponent implements OnInit {
     /* REVISA QUE NO ESTEN VACIOS LOS CAMPOS */
     if(email==="") alert("Todos los campos se deben llenar");
     else if(password==="") alert("Todos los campos se deben llenar");
-    else this.router.navigate(['/listado']);
+    else {
+      /* REVISA QUE EL USUARIO EXISTA Y HACE EL RESPECTIVO LOGEO */
+      this.router.navigate(['/listado']);
+    }
   }
 }

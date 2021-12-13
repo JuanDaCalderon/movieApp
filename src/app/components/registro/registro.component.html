@@ -1,32 +1,32 @@
 <main class="form-signin text-center">
-    <form>
-      <img class="mb-4" src="https://www.pinclipart.com/picdir/middle/4-48708_film-background-cliparts-movie-logo-without-background-png.png" alt="Logo" width="72" height="auto">
-      <h1 class="h3 mb-3 fw-normal">Please Sign Up</h1>
-  
+    <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+      <img class="mb-4" src="../../../assets/IMGS/Logo250.png" alt="Logo" width="250" height="auto">
+      <h1 class="h3 mb-3 fw-normal">Registrate</h1>
       <div class="form-floating">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Username</label>
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="userName">
+        <label for="floatingInput">Nombre de usuario</label>
+        <small *ngIf="!this.signInForm.get('userName')?.valid && signInForm.get('userName')?.touched"> El nombre de usuario es requerido </small>
       </div>
       <div class="form-floating">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Email address</label>
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="email">
+        <label for="floatingInput">Email</label>
+        <small *ngIf="!this.signInForm.get('email')?.valid && signInForm.get('email')?.touched"> El email es requerido </small>
       </div>
       <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Password</label>
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="password">
+        <label for="floatingPassword">Contraseña</label>
+        <small *ngIf="!this.signInForm.get('password')?.valid && signInForm.get('password')?.touched"> La contraseña es requerida </small>
       </div>
       <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Repeat your Password</label>
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="password2">
+        <label for="floatingPassword">Repita la contraseña</label>
+        <small *ngIf="!this.signInForm.get('password2')?.valid && signInForm.get('password2')?.touched"> Es necesario escribir de nuevo la contraseña </small>
       </div>
-  
-<!--       <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-      </div> -->
-      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
-      <p class="mt-5 mb-3 text-muted">&copy; MovieApp 2021</p>
+      <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Registrarme</button>
+      <div class="mt-5">
+        <span class="text-muted"> Olvidalo, ya lo recordé <br> <button [routerLink]="['/login']" routerLinkActive="router-link-active"  type="button" class="btn btn-link">Iniciar Sesión</button> </span>
+        <p class="mt-5 mb-3 text-muted">&copy; MovieApp 2021</p>
+      </div>
     </form>
   </main>
 
