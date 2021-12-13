@@ -7,6 +7,9 @@ import { LoginComponent } from './components/login/login.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { InfoComponent } from './components/info/info.component';
 import { RegistroComponent } from './components/registro/registro.component';
+import { ListadoComponent } from './components/listado/listado.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { RegistroComponent } from './components/registro/registro.component';
     LoginComponent,
     CarritoComponent,
     InfoComponent,
-    RegistroComponent
+    RegistroComponent,
+    ListadoComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
