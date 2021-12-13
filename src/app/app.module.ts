@@ -11,6 +11,7 @@ import { RegistroComponent } from './components/registro/registro.component';
 import { ListadoComponent } from './components/listado/listado.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FooterComponent } from './components/footer/footer.component';
     RegistroComponent,
     ListadoComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
