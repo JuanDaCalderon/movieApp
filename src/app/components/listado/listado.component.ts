@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 interface pelicula {
+  id: string;
   titulo: string;
   thumbnail : string;
   descripcion : string;
@@ -18,6 +19,7 @@ export class ListadoComponent implements OnInit {
   constructor() {
     this.peliculas = [
       {
+        id: "0",
         titulo: "007: Sin Tiempo Para Morir",
         thumbnail: "../../../assets/IMGS/007-Sin-Tiempo-Para-Morir.jpg",
         descripcion: "En ‘No Time to Die’, James Bond se encuentra disfrutando de unas merecidas vacaciones en Jamaica. Sin embargo, su paz termina cuando su amigo de la CIA, Felix Leiter, lo busca para una nueva misión que implica rescatar a un importante científico que ha sido secuestrado.",
@@ -25,6 +27,7 @@ export class ListadoComponent implements OnInit {
         duracion: "146 Min"
       },
       {
+        id: "1",
         titulo: "Alerta Roja",
         thumbnail: "../../../assets/IMGS/Alerta-roja.jpg",
         descripcion: "Un agente de la Interpol, la Organización Internacional de Policía Criminal, tiene como misión encontrar y capturar al ladrón de piezas de arte más buscado del mundo.",
