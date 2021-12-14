@@ -4,7 +4,25 @@ section.banner-bg{
     background-size: cover;
     background-position-y: -227px;
 }
-h1.title{
+h1.title, p.parrafo{
     color: white;
     text-shadow: black 2px 3px 5px;
+    font-size: 5rem;
 }
+
+@media screen and (max-width: 1200px) {
+    section.banner-bg{
+        background-position: center !important;
+    }
+  }
+
+@media screen and (max-width: 720px) {
+    h1.title{
+        font-size: 2rem !important;
+    }
+    p.parrafo{
+        font-size: 1rem !important;
+    }
+  }
+
+

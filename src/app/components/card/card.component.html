@@ -1,15 +1,26 @@
 <div class="col">
     <div class="card shadow-sm">
-      <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+      <img src={{thumbnail}} >
 
       <div class="card-body">
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h6>{{titulo}}</h6>
+        <p class="card-text description">{{descripcion}}</p>
         <div class="d-flex justify-content-between align-items-center">
           <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Género
+            </button>
+            <ul class="dropdown-menu">
+              <li *ngFor="let genero of generos" class="dropdown-item">{{genero}}</li>
+            </ul>
           </div>
-          <small class="text-muted">9 mins</small>
+          <small class="text-muted">{{duracion}}</small>
+        </div>
+        <div class="d-flex justify-content-between align-items-center w-100 my-2">
+          <button [routerLink]="['/detalle']" routerLinkActive="router-link-active"  type="button" class="btn btn-primary w-100"><i class="fa fa-eye mx-2"></i>Ver</button>
+        </div>
+        <div class="d-flex justify-content-between align-items-center w-100">
+          <button type="button" class="btn btn-success w-100" > <i class="fa fa-shopping-cart mx-2"></i> Añadir al carrito</button>
         </div>
       </div>
     </div>

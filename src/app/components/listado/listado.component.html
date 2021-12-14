@@ -3,28 +3,32 @@
 </header>
 
   <main>
-  
     <section class="py-5 text-center container-fluid banner-bg">
       <div class="row py-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
-          <h1 class="title">MOVIEAPP</h1>
-          <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+          <h1 class="title fw-bolder">MOVIEAPP</h1>
+          <p class="fs-4 parrafo">Un lugar donde encontraras tus películas favoritas en un solo click</p>
           <p>
-            <a href="#" class="btn btn-primary my-2">Main call to action</a>
-            <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+            <a class="btn btn-warning m-2 btn-lg">Ultimos Estrenos</a>
           </p>
         </div>
       </div>
     </section>
-  
+
     <div class="album py-5 bg-light">
       <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          <app-card></app-card>
+        <div class="row g-3">
+          <app-card class="col-12 col-sm-6 col-md-4 col-lg-3"
+          *ngFor="let pelicula of peliculas"
+          [thumbnail] = "pelicula.thumbnail"
+          [titulo] = "pelicula.titulo"
+          [descripcion] = "pelicula.descripcion"
+          [generos] = "pelicula.genero"
+          [duracion] = "pelicula.duracion"
+          ></app-card>
         </div>
       </div>
     </div>
-  
   </main>
 
 <app-footer></app-footer>
